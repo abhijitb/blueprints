@@ -266,8 +266,8 @@ const BlueprintsBrowser = () => {
                         src={blueprint.screenshot_url}
                         alt={`Screenshot of ${blueprint.name}`}
                         className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                        fill
-                        sizes="(max-width: 1024px) 100vw, 50vw"
+                        width={800}
+                        height={500}
                         loading="lazy"
                       />
                       <div className="absolute top-3 right-3">
@@ -313,8 +313,8 @@ const BlueprintsBrowser = () => {
                           src={blueprint.screenshot_url}
                           alt={blueprint.name}
                           className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                          fill
-                          sizes="160px"
+                          width={160}
+                          height={112}
                           loading="lazy"
                         />
                       </div>
