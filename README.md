@@ -1,36 +1,178 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Hiive Blueprints Browser
 
-## Getting Started
+A modern web application for browsing and previewing website templates and blueprints. Built with Next.js 15, React 19, and TypeScript, this application provides an intuitive interface for exploring various website templates with live previews and download capabilities.
 
-First, run the development server:
+## 🚀 Features
+
+- **📱 Responsive Design** - Works seamlessly on desktop, tablet, and mobile devices
+- **🎨 Grid & List Views** - Switch between different viewing modes for optimal browsing
+- **🔍 Search & Filter** - Find templates by name and filter by type (business, ecommerce, personal)
+- **👁️ Live Preview** - Full-screen modal preview with embedded iframe
+- **⬇️ Download Links** - Direct access to template resources
+- **🖼️ Optimized Images** - Next.js Image component with automatic optimization
+- **🎯 Type Safety** - Full TypeScript support with strict type checking
+- **⚡ Performance** - Server-side rendering and static generation capabilities
+
+## 🛠️ Tech Stack
+
+- **Framework**: [Next.js 15.5.2](https://nextjs.org/) with App Router
+- **Frontend**: [React 19.1.0](https://react.dev/)
+- **Language**: [TypeScript 5](https://www.typescriptlang.org/)
+- **Styling**: [Tailwind CSS 3.4.17](https://tailwindcss.com/)
+- **Icons**: [Lucide React](https://lucide.dev/)
+- **Build Tool**: Next.js built-in bundler
+- **Linting**: ESLint with Next.js configuration
+- **Font Optimization**: `next/font` with Geist fonts
+
+## 📋 Prerequisites
+
+- Node.js (version compatible with Next.js 15)
+- npm, yarn, pnpm, or bun
+
+## 🚀 Getting Started
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/abhijitb/blueprints.git
+   cd blueprints
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   # or
+   yarn install
+   # or
+   pnpm install
+   # or
+   bun install
+   ```
+
+3. **Run the development server**
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   # or
+   pnpm dev
+   # or
+   bun dev
+   ```
+
+4. **Open your browser**
+   
+   Navigate to [http://localhost:3000](http://localhost:3000) to see the application.
+
+## 📝 Available Scripts
 
 ```bash
+# Development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# Production build
+npm run build
+
+# Start production server
+npm start
+
+# Run linting
+npm run lint
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🏗️ Project Structure
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+blueprints/
+├── src/app/
+│   ├── globals.css      # Global styles with Tailwind directives
+│   ├── layout.tsx       # Root layout component
+│   └── page.tsx         # Main blueprints browser page
+├── public/              # Static assets (currently empty)
+├── next.config.ts       # Next.js configuration
+├── tailwind.config.ts   # Tailwind CSS configuration
+├── postcss.config.mjs   # PostCSS configuration
+├── tsconfig.json        # TypeScript configuration
+├── eslint.config.mjs    # ESLint configuration
+└── package.json         # Dependencies and scripts
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🔧 Configuration
 
-## Learn More
+### Image Domains
+The application is configured to load images from external CDN domains:
+- `patterns.hiive.cloud` - API domain
+- `bh-wp-onboarding.sfo3.cdn.digitaloceanspaces.com` - Image CDN
 
-To learn more about Next.js, take a look at the following resources:
+### Tailwind CSS
+Using Tailwind CSS v3.4.17 with PostCSS for styling. Custom configuration includes:
+- Custom color variables
+- Font family configuration for Geist fonts
+- Responsive design utilities
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📡 API Integration
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+The application fetches blueprint data from:
+```
+https://patterns.hiive.cloud/api/v1/blueprints
+```
 
-## Deploy on Vercel
+Expected API response structure:
+```typescript
+interface Blueprint {
+  name: string;
+  slug: string;
+  type: string;
+  preview_url: string;
+  screenshot_url: string;
+  resources_url: string;
+}
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🚀 Deployment
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Vercel (Recommended)
+The easiest way to deploy is using [Vercel](https://vercel.com/new):
+
+1. Push your code to GitHub
+2. Import your repository on Vercel
+3. Deploy with zero configuration
+
+### Other Platforms
+For other deployment platforms:
+
+1. **Build the application**
+   ```bash
+   npm run build
+   ```
+
+2. **Start the production server**
+   ```bash
+   npm start
+   ```
+
+## 🎨 Design Philosophy
+
+- **Single Page Application** - Simplified architecture with all functionality on the root route
+- **Mobile-First** - Responsive design that works on all devices
+- **Performance-Focused** - Optimized images, code splitting, and minimal bundle size
+- **Type-Safe** - Full TypeScript coverage for better developer experience
+- **Clean Code** - Following modern React and Next.js best practices
+
+## 🔍 Browser Support
+
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
+
+## 📄 License
+
+This project is private and proprietary.
+
+## 👨‍💻 Author
+
+**abhijitb** - [GitHub](https://github.com/abhijitb)
+
+---
+
+*Built with ❤️ using Next.js and modern web technologies*
