@@ -9,9 +9,6 @@ A modern web application for browsing and previewing website templates and bluep
 - **🔍 Search & Filter** - Find templates by name and filter by type (business, ecommerce, personal)
 - **👁️ Live Preview** - Full-screen modal preview with embedded iframe
 - **⬇️ Download Links** - Direct access to template resources
-- **🖼️ Optimized Images** - Next.js Image component with automatic optimization
-- **🎯 Type Safety** - Full TypeScript support with strict type checking
-- **⚡ Performance** - Server-side rendering and static generation capabilities
 
 ## 🛠️ Tech Stack
 
@@ -149,30 +146,6 @@ For other deployment platforms:
    ```bash
    npm start
    ```
-
-## 🎨 Design Philosophy
-
-- **Single Page Application** - Simplified architecture with all functionality on the root route
-- **Mobile-First** - Responsive design that works on all devices
-- **Performance-Focused** - Optimized images, code splitting, and minimal bundle size
-- **Type-Safe** - Full TypeScript coverage for better developer experience
-- **Clean Code** - Following modern React and Next.js best practices
-
-## 🔍 Browser Support
-
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
-
-## 📄 License
-
-This project is private and proprietary.
-
-## 👨‍💻 Author
-
-**abhijitb** - [GitHub](https://github.com/abhijitb)
-
 ---
 
 *Built with ❤️ using Next.js and modern web technologies*
